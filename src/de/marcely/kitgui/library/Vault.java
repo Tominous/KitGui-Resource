@@ -20,14 +20,14 @@ public class Vault {
     public static net.milkbowl.vault.permission.Permission permission = null;
     public static Chat chat = null;
     
-    //private static Chat chat = null;
+    private static Chat chat = null;
     
 	public static void onEnable(){
         // permissions
-		/*RegisteredServiceProvider<Permission> permissionProvider = Bukkit.getServer().getServicesManager().getRegistration(net.milkbowl.vault.permission.Permission.class);
+		RegisteredServiceProvider<Permission> permissionProvider = Bukkit.getServer().getServicesManager().getRegistration(net.milkbowl.vault.permission.Permission.class);
         if (permissionProvider != null) {
             permission = permissionProvider.getProvider();
-        }*/
+        }
         
         // enconomy
 		
@@ -40,10 +40,10 @@ public class Vault {
         		chat = Bukkit.getServer().getServicesManager().getRegistration(net.milkbowl.vault.chat.Chat.class).getProvider();
         }
         // chat
-        /*RegisteredServiceProvider<Chat> chatProvider = Bukkit.getServer().getServicesManager().getRegistration(net.milkbowl.vault.chat.Chat.class);
+        RegisteredServiceProvider<Chat> chatProvider = Bukkit.getServer().getServicesManager().getRegistration(net.milkbowl.vault.chat.Chat.class);
         if (chatProvider != null) {
             chat = chatProvider.getProvider();
-        }*/
+        }
 	}
 	
 	public static void giveMoney(Player player, double amount){
